@@ -244,9 +244,11 @@ body {
 .home-heading-call {
     display: inline-flex;
     align-items: center;
-    gap: 7px;
     flex: 0 0 auto;
-    padding: 10px 16px;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    padding: 0;
     border-radius: 999px;
     background: var(--color-accent);
     color: var(--color-menu);
@@ -1223,8 +1225,8 @@ footer {
     }
 
     .home-heading-call {
-        padding: 8px 14px;
-        font-size: 14px;
+        width: 38px;
+        height: 38px;
     }
 
     .home-heading-key {
