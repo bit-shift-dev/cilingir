@@ -46,7 +46,18 @@
         <main class="content-body home-content">
             <section class="home-heading" aria-label="İşletme adı">
                 <img class="home-heading-key" src="img/key-realistic.svg" alt="" aria-hidden="true">
-                <h1>BAHÇELİEVLER KISMET ÇİLİNGİR VE OTO ANAHTAR</h1>
+                <div class="home-heading-content">
+                    <h1>BAHÇELİEVLER KISMET ÇİLİNGİR VE OTO ANAHTAR</h1>
+                    <button class="home-heading-call" type="button" id="siteSearchToggle" aria-expanded="false" aria-controls="siteSearch">
+                        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                        <span>Ara</span>
+                    </button>
+                    <form class="site-search-form" id="siteSearch" action="arama.html" method="get" hidden>
+                        <label class="sr-only" for="siteSearchInput">Sitede ara</label>
+                        <input id="siteSearchInput" name="q" type="search" placeholder="Hizmet veya mahalle ara" autocomplete="off">
+                        <button type="submit" aria-label="Arama yap"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+                    </form>
+                </div>
             </section>
             <section class="image-slider home-slider" aria-label="Hizmetlerimiz">
                 <div class="image-slider-stage">
@@ -128,6 +139,8 @@
         const menuToggle = document.getElementById('menuToggle');
         const sidebar = document.getElementById('siteMenu');
         const mobileHeader = document.querySelector('.mobile-header');
+        const siteSearchToggle = document.getElementById('siteSearchToggle');
+        const siteSearch = document.getElementById('siteSearch');
         const servicesToggle = document.querySelector('.service-submenu-toggle');
         const servicesMenu = document.querySelector('.nav-services');
 
@@ -144,6 +157,15 @@
             menuToggle.setAttribute('aria-label', isOpen ? 'Menüyü kapat' : 'Menüyü aç');
             menuToggle.querySelector('i').classList.toggle('fa-bars', !isOpen);
             menuToggle.querySelector('i').classList.toggle('fa-xmark', isOpen);
+        });
+
+        siteSearchToggle.addEventListener('click', () => {
+            const isOpen = siteSearchToggle.getAttribute('aria-expanded') === 'true';
+            siteSearchToggle.setAttribute('aria-expanded', String(!isOpen));
+            siteSearch.hidden = isOpen;
+            if (!isOpen) {
+                siteSearch.querySelector('input').focus();
+            }
         });
 
         const imageSlides = document.querySelectorAll('.image-slide');

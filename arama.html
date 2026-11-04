@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bahçelievler Çilingir-Oto Anahtar hizmet ve bölge araması.">
+    <title>Site İçi Arama | Bahçelievler Çilingir-Oto Anahtar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main class="search-page">
+        <a class="search-page-back" href="index.html"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Ana sayfaya dön</a>
+        <section class="content-box">
+            <h1>Site İçi Arama</h1>
+            <form class="site-search-page-form" action="arama.html" method="get">
+                <label for="searchInput">Hizmet, mahalle veya semt arayın</label>
+                <div>
+                    <input id="searchInput" name="q" type="search" placeholder="Örn. Şirinevler çilingir" autocomplete="off">
+                    <button type="submit">Ara</button>
+                </div>
+            </form>
+            <p id="searchSummary"></p>
+            <div id="searchResults" class="search-results"></div>
+        </section>
+    </main>
+    <script>
+        const searchItems = [
+            ['Kapı açma', 'Bahçelievler acil çilingir, Şirinevler, Soğanlı, Hürriyet ve Yenibosna kapı açma hizmeti.', 'hizmet-detay.html?service=kapi-acma'],
+            ['Kilit değişim ve onarım', 'Bahçelievler kilit değişimi, kilit tamiri ve güvenli kapı kilidi yenileme.', 'hizmet-detay.html?service=kilit-degisim-onarim'],
+            ['Anahtar kopyalama', 'Bahçelievler anahtar kopyalama, yedek anahtar ve anahtar çoğaltma.', 'hizmet-detay.html?service=anahtar-kopyalama'],
+            ['Oto anahtar', 'Şirinevler, Soğanlı ve Yenibosna oto anahtar, immobilizer ve araç kumandası.', 'hizmet-detay.html?service=oto-anahtar'],
+            ['Kepenk kumandası', 'Kepenk kumandası kopyalama ve programlama hizmeti.', 'hizmet-detay.html?service=kepenk-kumandasi'],
+            ['Garaj kumandası', 'Garaj kumandası kopyalama ve eşleştirme hizmeti.', 'hizmet-detay.html?service=garaj-kumandasi'],
+            ['Çelik kasa', 'Çelik kasa açma ve kasa kilidi değişimi hizmeti.', 'hizmet-detay.html?service=celik-kasa'],
+            ['Bahçelievler hizmet bölgeleri', 'Bahçelievler, Şirinevler, Soğanlı, Hürriyet, Çobançeşme, Kocasinan, Siyavuşpaşa, Yenibosna ve Zafer mahalleleri.', 'hizmet-bolgeleri.html']
+        ];
+        const params = new URLSearchParams(window.location.search);
+        const query = (params.get('q') || '').trim();
+        const normalizedQuery = query.toLocaleLowerCase('tr-TR');
+        const results = searchItems.filter(([title, text]) => `${title} ${text}`.toLocaleLowerCase('tr-TR').includes(normalizedQuery));
+        const input = document.getElementById('searchInput');
+        const summary = document.getElementById('searchSummary');
+        const resultBox = document.getElementById('searchResults');
+        input.value = query;
+        if (!query) {
+            summary.textContent = 'Aramak istediğiniz hizmeti veya mahalleyi yazın.';
+        } else if (!results.length) {
+            summary.textContent = `"${query}" için sonuç bulunamadı.`;
+        } else {
+            summary.textContent = `"${query}" için ${results.length} sonuç bulundu.`;
+            results.forEach(([title, text, url]) => {
+                const article = document.createElement('article');
+                article.innerHTML = `<h2><a href="${url}">${title}</a></h2><p>${text}</p>`;
+                resultBox.appendChild(article);
+            });
+        }
+    </script>
+</body>
+</html>

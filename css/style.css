@@ -229,10 +229,135 @@ body {
     text-align: center;
 }
 
+.home-heading-content {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
 .home-heading h1 {
     font-size: clamp(21px, 3.2vw, 38px);
     letter-spacing: 0.055em;
     text-shadow: 1px 2px 0 rgba(0, 0, 0, 0.35);
+}
+
+.home-heading-call {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    flex: 0 0 auto;
+    padding: 10px 16px;
+    border-radius: 999px;
+    background: var(--color-accent);
+    color: var(--color-menu);
+    font-size: 15px;
+    font-weight: 700;
+    border: 0;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.site-search-form {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.site-search-form[hidden] {
+    display: none;
+}
+
+.site-search-form input {
+    width: min(230px, 30vw);
+    padding: 10px 12px;
+    border: 0;
+    border-radius: 999px;
+    color: var(--color-menu);
+    outline: none;
+}
+
+.site-search-form button {
+    display: grid;
+    width: 36px;
+    height: 36px;
+    place-items: center;
+    border: 0;
+    border-radius: 50%;
+    background: var(--color-accent);
+    color: var(--color-menu);
+    cursor: pointer;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+}
+
+.search-page {
+    width: min(900px, 100%);
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.search-page-back {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: var(--color-menu);
+    text-decoration: none;
+}
+
+.site-search-page-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.site-search-page-form > div {
+    display: flex;
+    gap: 8px;
+}
+
+.site-search-page-form input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid rgba(30, 41, 59, 0.35);
+    border-radius: 6px;
+}
+
+.site-search-page-form button {
+    padding: 0 20px;
+    border: 0;
+    border-radius: 6px;
+    background: var(--color-accent);
+    color: var(--color-menu);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.search-results article {
+    padding: 16px 0;
+    border-top: 1px solid rgba(30, 41, 59, 0.2);
+}
+
+.search-results h2 {
+    margin-bottom: 6px;
+    font-size: 19px;
+}
+
+.search-results h2 a {
+    color: var(--color-menu);
+}
+
+.home-heading-call:hover,
+.home-heading-call:focus-visible {
+    transform: translateY(-2px);
+    filter: brightness(1.08);
 }
 
 .home-heading-key {
@@ -1087,9 +1212,19 @@ footer {
         padding: 14px 12px;
     }
 
+    .home-heading-content {
+        flex-direction: column;
+        gap: 8px;
+    }
+
     .home-heading h1 {
         font-size: clamp(14px, 4.2vw, 22px);
         letter-spacing: 0.035em;
+    }
+
+    .home-heading-call {
+        padding: 8px 14px;
+        font-size: 14px;
     }
 
     .home-heading-key {
