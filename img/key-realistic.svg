@@ -1,29 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 140" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 150" role="img" aria-labelledby="title desc">
   <title id="title">Metal anahtar</title>
-  <desc id="desc">Parlak metalik, hareketli anahtar illüstrasyonu</desc>
+  <desc id="desc">Halka, gövde ve dişleri belirgin metal anahtar çizimi</desc>
   <defs>
-    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#fff5c7"/>
-      <stop offset=".25" stop-color="#e6a23c"/>
-      <stop offset=".55" stop-color="#fff1ae"/>
-      <stop offset=".8" stop-color="#ad6b19"/>
-      <stop offset="1" stop-color="#f3c35f"/>
+    <linearGradient id="metal" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff5bb"/>
+      <stop offset=".28" stop-color="#e7a638"/>
+      <stop offset=".52" stop-color="#fff0a0"/>
+      <stop offset=".78" stop-color="#b86f17"/>
+      <stop offset="1" stop-color="#f0bd55"/>
     </linearGradient>
-    <linearGradient id="edge" x1="0" y1="0" x2="0" y2="1">
-      <stop stop-color="#fffbe3"/>
-      <stop offset=".45" stop-color="#d28b29"/>
-      <stop offset="1" stop-color="#81500f"/>
-    </linearGradient>
-    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%">
+    <filter id="shadow" x="-15%" y="-25%" width="140%" height="160%">
       <feDropShadow dx="3" dy="6" stdDeviation="3" flood-color="#000" flood-opacity=".5"/>
     </filter>
   </defs>
-  <g fill="url(#metal)" stroke="#75470c" stroke-width="4" stroke-linejoin="round" filter="url(#shadow)">
-    <path d="M66 70a35 35 0 1 1-7-22l32 32-10 10-8-8-10 10-11-11 10-10-7-7a17 17 0 1 0 11-11l16-16a35 35 0 0 1 4 33z"/>
-    <path d="M88 72l73-73 19 19-8 8 12 12-15 15-12-12-9 9 10 10-15 15-10-10-15 15z"/>
-    <path d="M157 1l19 19 11-11-19-19z" fill="url(#edge)"/>
+  <g fill="url(#metal)" stroke="#75470c" stroke-width="5" stroke-linejoin="round" filter="url(#shadow)">
+    <circle cx="60" cy="75" r="48"/>
+    <circle cx="60" cy="75" r="22" fill="#1e293b" stroke="#9a6118" stroke-width="5"/>
+    <path d="M92 57h133v36H92z"/>
+    <path d="M205 57h26v18h18v18h-44z"/>
+    <path d="M167 93v22h-18V93z"/>
+    <path d="M191 93v30h-18V93z"/>
+    <path d="M215 93v20h-18V93z"/>
   </g>
-  <path d="M35 42a24 24 0 0 1 19-8" fill="none" stroke="#fff9dc" stroke-width="5" stroke-linecap="round" opacity=".8"/>
-  <path d="M101 57l57-57m-44 71l57-57" fill="none" stroke="#fff8d2" stroke-width="2.5" stroke-linecap="round" opacity=".72"/>
-  <circle cx="42" cy="70" r="13" fill="none" stroke="#9d6319" stroke-width="3" opacity=".75"/>
+  <path d="M33 48a34 34 0 0 1 36-9" fill="none" stroke="#fffbdc" stroke-width="8" stroke-linecap="round" opacity=".85"/>
+  <path d="M105 66h105" stroke="#fff8c9" stroke-width="5" stroke-linecap="round" opacity=".75"/>
 </svg>
