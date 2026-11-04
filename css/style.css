@@ -237,8 +237,8 @@ body {
 
 .home-heading-key {
     display: inline-block;
-    width: clamp(92px, 10vw, 150px);
-    height: clamp(68px, 8vw, 105px);
+    width: clamp(120px, 13vw, 190px);
+    height: clamp(88px, 10vw, 132px);
     object-fit: contain;
     animation: key-float 1.8s ease-in-out infinite;
 }
@@ -1093,8 +1093,8 @@ footer {
     }
 
     .home-heading-key {
-        width: 88px;
-        height: 66px;
+        width: 104px;
+        height: 78px;
     }
 
     .home-slider {

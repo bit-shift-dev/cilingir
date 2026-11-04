@@ -24,4 +24,6 @@
     <path d="M157 1l19 19 11-11-19-19z" fill="url(#edge)"/>
   </g>
   <path d="M35 42a24 24 0 0 1 19-8" fill="none" stroke="#fff9dc" stroke-width="5" stroke-linecap="round" opacity=".8"/>
+  <path d="M101 57l57-57m-44 71l57-57" fill="none" stroke="#fff8d2" stroke-width="2.5" stroke-linecap="round" opacity=".72"/>
+  <circle cx="42" cy="70" r="13" fill="none" stroke="#9d6319" stroke-width="3" opacity=".75"/>
 </svg>
