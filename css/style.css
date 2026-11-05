@@ -19,6 +19,63 @@ body {
     color: var(--color-menu);
 }
 
+.theme-toggle {
+    position: fixed;
+    top: 16px;
+    right: 18px;
+    z-index: 1100;
+    display: grid;
+    width: 40px;
+    height: 40px;
+    place-items: center;
+    border: 1px solid rgba(232, 223, 209, 0.45);
+    border-radius: 50%;
+    background: var(--color-menu);
+    color: var(--color-taupe);
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+    background: var(--color-accent);
+    color: var(--color-menu);
+    transform: translateY(-2px);
+}
+
+body.dark-mode {
+    background-color: #0f172a;
+    color: #e2e8f0;
+}
+
+body.dark-mode .main-content,
+body.dark-mode .image-slider-info,
+body.dark-mode .content-box,
+body.dark-mode .search-page {
+    background-color: #1e293b;
+}
+
+body.dark-mode .image-slide-caption,
+body.dark-mode .image-slide-caption h1,
+body.dark-mode .image-slide-caption p,
+body.dark-mode .content-box h2,
+body.dark-mode .content-box p,
+body.dark-mode .search-page,
+body.dark-mode .search-page-back,
+body.dark-mode .search-results h2 a {
+    color: #e2e8f0;
+}
+
+body.dark-mode .image-slider-info {
+    border-color: rgba(226, 232, 240, 0.18);
+}
+
+body.dark-mode .content-box {
+    border-color: rgba(226, 232, 240, 0.2);
+}
+
 /* --- MOBİL ÜST BAR & HAMBURGER MENÜ (Varsayılan olarak gizli) --- */
 .mobile-header {
     display: none;
