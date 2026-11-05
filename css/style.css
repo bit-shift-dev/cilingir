@@ -76,6 +76,51 @@ body.dark-mode .content-box {
     border-color: rgba(226, 232, 240, 0.2);
 }
 
+body.dark-mode .service-card,
+body.dark-mode .district-grid details,
+body.dark-mode .emergency-call,
+body.dark-mode .site-search-page-form input {
+    background-color: #0f172a;
+    color: #e2e8f0;
+}
+
+body.dark-mode .service-card,
+body.dark-mode .district-grid details,
+body.dark-mode .emergency-call,
+body.dark-mode .site-search-page-form input,
+body.dark-mode .contact-map {
+    border-color: rgba(226, 232, 240, 0.2);
+}
+
+body.dark-mode .service-card h3,
+body.dark-mode .business-details p,
+body.dark-mode .business-details a,
+body.dark-mode .district-grid summary,
+body.dark-mode .district-grid details p,
+body.dark-mode .emergency-call {
+    color: #e2e8f0;
+}
+
+body.dark-mode .content-box a:not(.contact-link):not(.district-call):not(.emergency-call) {
+    color: #f3c46b;
+}
+
+body.dark-mode .site-search-page-form input::placeholder {
+    color: #94a3b8;
+}
+
+body.dark-mode .search-results article,
+body.dark-mode .area-subtitle,
+body.dark-mode .service-note,
+body.dark-mode .maps-photo-link {
+    border-color: rgba(226, 232, 240, 0.2);
+}
+
+body.dark-mode .service-card-image,
+body.dark-mode .service-detail-image {
+    background-color: #1e293b;
+}
+
 /* --- MOBİL ÜST BAR & HAMBURGER MENÜ (Varsayılan olarak gizli) --- */
 .mobile-header {
     display: none;
