@@ -137,29 +137,15 @@
     <a class="whatsapp-fab" href="https://wa.me/905324356523?text=Acil%20anahtarc%C4%B1%20hizmeti%20i%C3%A7in%20yard%C4%B1m%20istiyorum." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp ile iletişime geç">
         <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
     </a>
+    <script src="js/theme.js"></script>
     <script>
         const menuToggle = document.getElementById('menuToggle');
         const sidebar = document.getElementById('siteMenu');
         const mobileHeader = document.querySelector('.mobile-header');
         const siteSearchToggle = document.getElementById('siteSearchToggle');
         const siteSearch = document.getElementById('siteSearch');
-        const themeToggle = document.getElementById('themeToggle');
         const servicesToggle = document.querySelector('.service-submenu-toggle');
         const servicesMenu = document.querySelector('.nav-services');
-
-        const setDarkMode = (isDarkMode) => {
-            document.body.classList.toggle('dark-mode', isDarkMode);
-            themeToggle.setAttribute('aria-pressed', String(isDarkMode));
-            themeToggle.setAttribute('aria-label', isDarkMode ? 'Gündüz modunu aç' : 'Gece modunu aç');
-            themeToggle.querySelector('i').className = isDarkMode ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
-        };
-
-        setDarkMode(localStorage.getItem('darkMode') === 'true');
-        themeToggle.addEventListener('click', () => {
-            const isDarkMode = !document.body.classList.contains('dark-mode');
-            localStorage.setItem('darkMode', String(isDarkMode));
-            setDarkMode(isDarkMode);
-        });
 
         servicesToggle.addEventListener('click', () => {
             const isOpen = servicesMenu.classList.toggle('open');
