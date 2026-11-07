@@ -7,9 +7,9 @@ const setDarkMode = (isDarkMode) => {
     themeToggle.querySelector('i').className = isDarkMode ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
 };
 
-setDarkMode(localStorage.getItem('darkMode') === 'true');
+setDarkMode(localStorage.getItem('siteTheme') === 'dark');
 themeToggle.addEventListener('click', () => {
     const isDarkMode = !document.body.classList.contains('dark-mode');
-    localStorage.setItem('darkMode', String(isDarkMode));
+    localStorage.setItem('siteTheme', isDarkMode ? 'dark' : 'light');
     setDarkMode(isDarkMode);
 });
